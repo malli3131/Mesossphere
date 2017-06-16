@@ -645,3 +645,6 @@ Password:
 ==> p1: [sudo]$ bash -ceu "systemctl stop dcos-mesos-slave-public.service && rm -f /var/lib/mesos/slave/meta/slaves/latest && systemctl start dcos-mesos-slave-public.service --no-block"
 ==> boot: DC/OS Installation Complete
 ==> boot: Web Interface: http://m1.dcos/
+
+Installing CLI:
+ci/dcos-install-cli.sh
