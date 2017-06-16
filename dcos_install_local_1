@@ -648,3 +648,18 @@ Password:
 
 Installing CLI:
 ci/dcos-install-cli.sh
+DC/OS URL: http://m1.dcos/
+Version detect script: ci/dcos-version.sh
+DC/OS Version: 1.9.0
+DC/OS Major Version: 1.9
+Download URL: https://downloads.dcos.io/binaries/cli/darwin/x86-64/dcos-1.9/dcos
+Download Path: /var/folders/3j/tjddpfy14y386llpzjt9ms8r0000gn/T/dcos-install-cli.n0RbkXr0eBGI/dcos
+Install Path: /usr/local/bin/dcos
+Config: core.dcos_url=http://m1.dcos/
+[core.dcos_url]: set to 'http://m1.dcos/'
+dcoscli.version=0.4.16
+dcos.version=1.9.0
+dcos.commit=0ce03387884523f02624d3fb56c7fbe2e06e181b
+dcos.bootstrap-id=58fd0833ce81b6244fc73bf65b5deb43217b0bd7
+Location:
+/usr/local/bin/dcos
