@@ -1,6 +1,7 @@
 Installing DC/OS locally.
 1. Install git : brew install git - sudo yum install git - sudo apt-get install git
 2. Install virtualbox: brew cask install virtualbox - sudo yum install virtualbox - sudo apt-get install virtualbox
+3. Install docker
 3. Install Vagrant: brew cask install vagrant - sudo yum install vagrant - sudo apt-get install vagrant
 4. Install vagrant-manager: brew cask install vagrant-manager - sudo yum install vagrant-manager - sudo apt-get install vagrant-manager
 5. Install vagrant-hostmanager: vagrant plugin install vagrant-hostmanager
@@ -48,3 +49,599 @@ Bringing machine 'boot' up with 'virtualbox' provider...
     m1: SSH address: 127.0.0.1:2222
     m1: SSH username: vagrant
     m1: SSH auth method: private key
+    ==> m1: Mounting shared folders...
+    m1: /vagrant => /Users/nagainelu/bigdata/dcos/dcos-vagrant
+==> m1: [vagrant-hostmanager:guests] Updating hosts file on active guest virtual machines...
+==> m1: [vagrant-hostmanager:host] Updating hosts file on your workstation (password may be required)...
+Password:
+==> m1: Running provisioner: shell...
+    m1: Running: inline script
+==> m1: Running provisioner: dcos_ssh...
+    host: Generating new keys...
+==> m1: Inserting generated public key within guest...
+==> m1: Configuring vagrant to connect using generated private key...
+==> m1: Removing insecure key from the guest, if it's present...
+==> m1: Running provisioner: shell...
+    m1: Running: script: Certificate Authorities
+==> m1: >>> Installing Certificate Authorities
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install Probe
+==> m1: Probe already installed: /usr/local/sbin/probe
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install jq
+==> m1: jq already installed: /usr/local/sbin/jq
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install DC/OS Postflight
+==> m1: >>> Installing DC/OS Postflight: /usr/local/sbin/dcos-postflight
+==> a1: Box 'mesosphere/dcos-centos-virtualbox' could not be found. Attempting to find and install...
+    a1: Box Provider: virtualbox
+    a1: Box Version: ~> 0.9.0
+==> a1: Loading metadata for box 'https://downloads.dcos.io/dcos-vagrant/metadata.json'
+    a1: URL: https://downloads.dcos.io/dcos-vagrant/metadata.json
+==> a1: Adding box 'mesosphere/dcos-centos-virtualbox' (v0.9.1) for provider: virtualbox
+==> a1: Importing base box 'mesosphere/dcos-centos-virtualbox'...
+==> a1: Matching MAC address for NAT networking...
+==> a1: Checking if box 'mesosphere/dcos-centos-virtualbox' is up to date...
+
+
+==> m1: Checking if box 'mesosphere/dcos-centos-virtualbox' is up to date...
+==> m1: Setting the name of the VM: m1.dcos
+==> m1: Clearing any previously set network interfaces...
+==> m1: Preparing network interfaces based on configuration...
+    m1: Adapter 1: nat
+    m1: Adapter 2: hostonly
+==> m1: Forwarding ports...
+    m1: 22 (guest) => 2222 (host) (adapter 1)
+==> m1: Running 'pre-boot' VM customizations...
+==> m1: Booting VM...
+==> m1: Waiting for machine to boot. This may take a few minutes...
+    m1: SSH address: 127.0.0.1:2222
+    m1: SSH username: vagrant
+    m1: SSH auth method: private key
+==> m1: Machine booted and ready!
+==> m1: Checking for guest additions in VM...
+==> m1: Setting hostname...
+==> m1: Configuring and enabling network interfaces...
+    m1: SSH address: 127.0.0.1:2222
+    m1: SSH username: vagrant
+    m1: SSH auth method: private key
+==> m1: Mounting shared folders...
+    m1: /vagrant => /Users/nagainelu/bigdata/dcos/dcos-vagrant
+==> m1: [vagrant-hostmanager:guests] Updating hosts file on active guest virtual machines...
+==> m1: [vagrant-hostmanager:host] Updating hosts file on your workstation (password may be required)...
+Password:
+==> m1: Running provisioner: shell...
+    m1: Running: inline script
+==> m1: Running provisioner: dcos_ssh...
+    host: Generating new keys...
+==> m1: Inserting generated public key within guest...
+==> m1: Configuring vagrant to connect using generated private key...
+==> m1: Removing insecure key from the guest, if it's present...
+==> m1: Running provisioner: shell...
+    m1: Running: script: Certificate Authorities
+==> m1: >>> Installing Certificate Authorities
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install Probe
+==> m1: Probe already installed: /usr/local/sbin/probe
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install jq
+==> m1: jq already installed: /usr/local/sbin/jq
+==> m1: Running provisioner: shell...
+    m1: Running: script: Install DC/OS Postflight
+==> m1: >>> Installing DC/OS Postflight: /usr/local/sbin/dcos-postflight
+==> a1: Box 'mesosphere/dcos-centos-virtualbox' could not be found. Attempting to find and install...
+    a1: Box Provider: virtualbox
+    a1: Box Version: ~> 0.9.0
+==> a1: Loading metadata for box 'https://downloads.dcos.io/dcos-vagrant/metadata.json'
+    a1: URL: https://downloads.dcos.io/dcos-vagrant/metadata.json
+==> a1: Adding box 'mesosphere/dcos-centos-virtualbox' (v0.9.1) for provider: virtualbox
+==> a1: Importing base box 'mesosphere/dcos-centos-virtualbox'...
+==> a1: Matching MAC address for NAT networking...
+==> a1: Checking if box 'mesosphere/dcos-centos-virtualbox' is up to date...
+==> a1: Setting the name of the VM: a1.dcos
+==> a1: Fixed port collision for 22 => 2222. Now on port 2200.
+==> a1: Clearing any previously set network interfaces...
+==> a1: Preparing network interfaces based on configuration...
+    a1: Adapter 1: nat
+    a1: Adapter 2: hostonly
+==> a1: Forwarding ports...
+    a1: 22 (guest) => 2200 (host) (adapter 1)
+==> a1: Running 'pre-boot' VM customizations...
+==> a1: Booting VM...
+==> a1: Waiting for machine to boot. This may take a few minutes...
+    a1: SSH address: 127.0.0.1:2200
+    a1: SSH username: vagrant
+    a1: SSH auth method: private key
+    a1: Warning: Connection reset. Retrying...
+    a1: Warning: Remote connection disconnect. Retrying...
+    a1: Warning: Connection reset. Retrying...
+==> a1: Machine booted and ready!
+==> a1: Checking for guest additions in VM...
+==> a1: Setting hostname...
+==> a1: Configuring and enabling network interfaces...
+    a1: SSH address: 127.0.0.1:2200
+    a1: SSH username: vagrant
+    a1: SSH auth method: private key
+==> a1: Mounting shared folders...
+    a1: /vagrant => /Users/nagainelu/bigdata/dcos/dcos-vagrant
+==> a1: [vagrant-hostmanager:guests] Updating hosts file on active guest virtual machines...
+==> a1: [vagrant-hostmanager:host] Updating hosts file on your workstation (password may be required)...
+==> a1: Running provisioner: shell...
+    a1: Running: inline script
+==> a1: Running provisioner: dcos_ssh...
+    host: Found existing keys
+==> a1: Inserting generated public key within guest...
+==> a1: Configuring vagrant to connect using generated private key...
+==> a1: Removing insecure key from the guest, if it's present...
+==> a1: Running provisioner: shell...
+    a1: Running: script: Certificate Authorities
+==> a1: >>> Installing Certificate Authorities
+==> a1: Running provisioner: shell...
+    a1: Running: script: Install Probe
+==> a1: Probe already installed: /usr/local/sbin/probe
+==> a1: Running provisioner: shell...
+    a1: Running: script: Install jq
+==> a1: jq already installed: /usr/local/sbin/jq
+==> a1: Running provisioner: shell...
+    a1: Running: script: Install DC/OS Postflight
+==> a1: >>> Installing DC/OS Postflight: /usr/local/sbin/dcos-postflight
+==> a1: Running provisioner: shell...
+    a1: Running: script: Install Mesos Memory Modifier
+==> a1: >>> Installing Mesos Memory Modifier: /usr/local/sbin/mesos-memory
+==> a1: Running provisioner: shell...
+    a1: Running: script: DC/OS Agent-private
+==> a1: Skipping DC/OS private agent install (boot machine will provision in parallel)
+==> p1: Box 'mesosphere/dcos-centos-virtualbox' could not be found. Attempting to find and install...
+    p1: Box Provider: virtualbox
+    p1: Box Version: ~> 0.9.0
+==> p1: Loading metadata for box 'https://downloads.dcos.io/dcos-vagrant/metadata.json'
+    p1: URL: https://downloads.dcos.io/dcos-vagrant/metadata.json
+==> p1: Adding box 'mesosphere/dcos-centos-virtualbox' (v0.9.1) for provider: virtualbox
+==> p1: Importing base box 'mesosphere/dcos-centos-virtualbox'...
+==> p1: Matching MAC address for NAT networking...
+==> p1: Checking if box 'mesosphere/dcos-centos-virtualbox' is up to date...
+==> p1: Setting the name of the VM: p1.dcos
+==> p1: Fixed port collision for 22 => 2222. Now on port 2201.
+==> p1: Clearing any previously set network interfaces...
+==> p1: Preparing network interfaces based on configuration...
+    p1: Adapter 1: nat
+    p1: Adapter 2: hostonly
+==> p1: Forwarding ports...
+    p1: 22 (guest) => 2201 (host) (adapter 1)
+==> p1: Running 'pre-boot' VM customizations...
+==> p1: Booting VM...
+==> p1: Waiting for machine to boot. This may take a few minutes...
+    p1: SSH address: 127.0.0.1:2201
+    p1: SSH username: vagrant
+    p1: SSH auth method: private key
+==> p1: Machine booted and ready!
+==> p1: Checking for guest additions in VM...
+==> p1: Setting hostname...
+==> p1: Configuring and enabling network interfaces...
+    p1: SSH address: 127.0.0.1:2201
+    p1: SSH username: vagrant
+    p1: SSH auth method: private key
+==> p1: Mounting shared folders...
+    p1: /vagrant => /Users/nagainelu/bigdata/dcos/dcos-vagrant
+==> p1: [vagrant-hostmanager:guests] Updating hosts file on active guest virtual machines...
+==> p1: [vagrant-hostmanager:host] Updating hosts file on your workstation (password may be required)...
+==> p1: Running provisioner: shell...
+    p1: Running: inline script
+==> p1: Running provisioner: dcos_ssh...
+    host: Found existing keys
+==> p1: Inserting generated public key within guest...
+==> p1: Configuring vagrant to connect using generated private key...
+==> p1: Removing insecure key from the guest, if it's present...
+==> p1: Running provisioner: shell...
+    p1: Running: script: Certificate Authorities
+==> p1: >>> Installing Certificate Authorities
+==> p1: Running provisioner: shell...
+    p1: Running: script: Install Probe
+==> p1: Probe already installed: /usr/local/sbin/probe
+==> p1: Running provisioner: shell...
+    p1: Running: script: Install jq
+==> p1: jq already installed: /usr/local/sbin/jq
+==> p1: Running provisioner: shell...
+    p1: Running: script: Install DC/OS Postflight
+==> p1: >>> Installing DC/OS Postflight: /usr/local/sbin/dcos-postflight
+==> p1: Running provisioner: shell...
+    p1: Running: script: Install Mesos Memory Modifier
+==> p1: >>> Installing Mesos Memory Modifier: /usr/local/sbin/mesos-memory
+==> p1: Running provisioner: shell...
+    p1: Running: script: DC/OS Agent-public
+==> p1: Skipping DC/OS public agent install (boot machine will provision in parallel)
+==> boot: Box 'mesosphere/dcos-centos-virtualbox' could not be found. Attempting to find and install...
+    boot: Box Provider: virtualbox
+    boot: Box Version: ~> 0.9.0
+==> boot: Loading metadata for box 'https://downloads.dcos.io/dcos-vagrant/metadata.json'
+    boot: URL: https://downloads.dcos.io/dcos-vagrant/metadata.json
+==> boot: Adding box 'mesosphere/dcos-centos-virtualbox' (v0.9.1) for provider: virtualbox
+==> boot: Importing base box 'mesosphere/dcos-centos-virtualbox'...
+
+==> boot: Matching MAC address for NAT networking...
+==> boot: Checking if box 'mesosphere/dcos-centos-virtualbox' is up to date...
+==> boot: Setting the name of the VM: boot.dcos
+==> boot: Fixed port collision for 22 => 2222. Now on port 2202.
+==> boot: Clearing any previously set network interfaces...
+==> boot: Preparing network interfaces based on configuration...
+    boot: Adapter 1: nat
+    boot: Adapter 2: hostonly
+==> boot: Forwarding ports...
+    boot: 22 (guest) => 2202 (host) (adapter 1)
+==> boot: Running 'pre-boot' VM customizations...
+==> boot: Booting VM...
+==> boot: Waiting for machine to boot. This may take a few minutes...
+    boot: SSH address: 127.0.0.1:2202
+    boot: SSH username: vagrant
+    boot: SSH auth method: private key
+    
+ ==> boot: Machine booted and ready!
+==> boot: Checking for guest additions in VM...
+==> boot: Setting hostname...
+==> boot: Configuring and enabling network interfaces...
+    boot: SSH address: 127.0.0.1:2202
+    boot: SSH username: vagrant
+    boot: SSH auth method: private key
+==> boot: Mounting shared folders...
+    boot: /vagrant => /Users/nagainelu/bigdata/dcos/dcos-vagrant
+==> boot: [vagrant-hostmanager:guests] Updating hosts file on active guest virtual machines...
+==> boot: [vagrant-hostmanager:host] Updating hosts file on your workstation (password may be required)...
+==> boot: Running provisioner: shell...
+    boot: Running: inline script
+==> boot: Running provisioner: dcos_ssh...
+    host: Found existing keys
+==> boot: Inserting generated public key within guest...
+==> boot: Configuring vagrant to connect using generated private key...
+==> boot: Removing insecure key from the guest, if it's present...
+==> boot: Running provisioner: shell...
+    boot: Running: script: Certificate Authorities
+==> boot: >>> Installing Certificate Authorities
+==> boot: Running provisioner: shell...
+    boot: Running: script: Install Probe
+==> boot: Probe already installed: /usr/local/sbin/probe
+==> boot: Running provisioner: shell...
+    boot: Running: script: Install jq
+==> boot: jq already installed: /usr/local/sbin/jq
+==> boot: Running provisioner: shell...
+    boot: Running: script: Install DC/OS Postflight
+==> boot: >>> Installing DC/OS Postflight: /usr/local/sbin/dcos-postflight
+==> boot: Running provisioner: shell...
+    boot: Running: script: DC/OS Boot
+==> boot: >>> Starting zookeeper (for exhibitor bootstrap and quorum)
+==> boot: 75ddb153b739107d49ad1a090b4ca529fc5eabed18a13f6ad699c04dc8cb7521
+==> boot: >>> Starting nginx (for distributing bootstrap artifacts to cluster)
+==> boot: 8b5baec7b0cd314dd53fddfd01e70d1e3c96f208f03c706bdb2a0eb5ec8ee019
+==> boot: >>> Downloading dcos_generate_config.sh (for building bootstrap image for system)
+==> boot: Running provisioner: dcos_install...
+==> boot: [sudo]$ cd ~/dcos && bash ~/dcos/dcos_generate_config.sh --version
+    boot:       Extracting image from this script and loading into docker daemon, this step can take a few minutes
+    boot:       dcos-genconf.0ce03387884523f026-58fd0833ce81b6244f.tar
+    
+ 
+ boot:       dcos-genconf.0ce03387884523f026-58fd0833ce81b6244f.tar
+    boot:       Loaded image: mesosphere/dcos-genconf:0ce03387884523f026-58fd0833ce81b6244f
+    boot:       {
+    boot:         "variant": "",
+    boot:         "version": "1.9.0"
+    boot:       }
+==> boot: Installing DC/OS 1.9.0
+==> boot: Reading etc/config-1.9.yaml
+==> boot: Analyzing machines
+==> boot: Generating Configuration: ~/dcos/genconf/config.yaml
+==> boot: [sudo]$ cat << EOF > ~/dcos/genconf/config.yaml
+==> boot:       ---
+==> boot:       cluster_name: dcos-vagrant
+==> boot:       bootstrap_url: http://192.168.65.50
+==> boot:       exhibitor_storage_backend: static
+==> boot:       master_discovery: static
+==> boot:       master_list:
+==> boot:       - 192.168.65.90
+==> boot:       resolvers:
+==> boot:       - 10.0.2.3
+==> boot:       superuser_username: admin
+==> boot:       superuser_password_hash: "\$6\$rounds=656000\$123o/Qz.InhbkbsO\$kn5IkpWm5CplEorQo7jG/27LkyDgWrml36lLxDtckZkCxu22uihAJ4DOJVVnNbsz/Y5MCK3B1InquE6E7Jmh30"
+==> boot:       ssh_port: 22
+==> boot:       ssh_user: vagrant
+==> boot:       agent_list:
+==> boot:       - 192.168.65.111
+==> boot:       platform: vagrant-virtualbox
+==> boot:       check_time: false
+==> boot:       public_agent_list:
+==> boot:       - 192.168.65.60
+==> boot:       exhibitor_zk_hosts: 192.168.65.50:2181
+==> boot:       
+==> boot:       EOF
+==> boot: Generating IP Detection Script: ~/dcos/genconf/ip-detect
+==> boot: [sudo]$ cat << 'EOF' > ~/dcos/genconf/ip-detect
+==> boot:       #!/usr/bin/env bash
+==> boot:       set -o errexit
+==> boot:       set -o nounset
+==> boot:       set -o pipefail
+==> boot:       echo $(/usr/sbin/ip route show to match 192.168.65.90 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | tail -1)
+==> boot:       
+==> boot:       EOF
+==> boot: Importing Private SSH Key: ~/dcos/genconf/ssh_key
+==> boot: [sudo]$ cp /vagrant/.vagrant/dcos/private_key_vagrant ~/dcos/genconf/ssh_key
+==> boot: Generating DC/OS Installer Files: ~/dcos/genconf/serve/
+==> boot: [sudo]$ cd ~/dcos && bash ~/dcos/dcos_generate_config.sh --genconf && cp -rpv ~/dcos/genconf/serve/* /var/tmp/dcos/ && echo ok > /var/tmp/dcos/ready
+==> boot:       ====> EXECUTING CONFIGURATION GENERATION
+==> boot:       Generating configuration files...
+==> boot:       Generating configuration files...
+==> boot:       Package filename: packages/dcos-config/dcos-config--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz
+==> boot:       Package filename: packages/dcos-metadata/dcos-metadata--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz
+    boot:       Generating Bash configuration files for DC/OS
+    boot:       ‘/root/dcos/genconf/serve/bootstrap’ -> ‘/var/tmp/dcos/bootstrap’
+    boot:       ‘/root/dcos/genconf/serve/bootstrap/58fd0833ce81b6244fc73bf65b5deb43217b0bd7.bootstrap.tar.xz’ -> ‘/var/tmp/dcos/bootstrap/58fd0833ce81b6244fc73bf65b5deb43217b0bd7.bootstrap.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/bootstrap/58fd0833ce81b6244fc73bf65b5deb43217b0bd7.active.json’ -> ‘/var/tmp/dcos/bootstrap/58fd0833ce81b6244fc73bf65b5deb43217b0bd7.active.json’
+    boot:       ‘/root/dcos/genconf/serve/bootstrap.latest’ -> ‘/var/tmp/dcos/bootstrap.latest’
+    boot:       ‘/root/dcos/genconf/serve/cluster-package-info.json’ -> ‘/var/tmp/dcos/cluster-package-info.json’
+    boot:       ‘/root/dcos/genconf/serve/dcos_install.sh’ -> ‘/var/tmp/dcos/dcos_install.sh’
+    boot:       ‘/root/dcos/genconf/serve/packages’ -> ‘/var/tmp/dcos/packages’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-config’ -> ‘/var/tmp/dcos/packages/dcos-config’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-config/dcos-config--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-config/dcos-config--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-metadata’ -> ‘/var/tmp/dcos/packages/dcos-metadata’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-metadata/dcos-metadata--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-metadata/dcos-metadata--setup_d7ace59e465c871d17debeeb046f50f78b897f8e.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/3dt’ -> ‘/var/tmp/dcos/packages/3dt’
+    boot:       ‘/root/dcos/genconf/serve/packages/3dt/3dt--7847ebb24bf6756c3103902971b34c3f09c3afbd.tar.xz’ -> ‘/var/tmp/dcos/packages/3dt/3dt--7847ebb24bf6756c3103902971b34c3f09c3afbd.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/adminrouter’ -> ‘/var/tmp/dcos/packages/adminrouter’
+    boot:       ‘/root/dcos/genconf/serve/packages/adminrouter/adminrouter--0493a6fdaed08e1971871818e194aa4607df4f09.tar.xz’ -> ‘/var/tmp/dcos/packages/adminrouter/adminrouter--0493a6fdaed08e1971871818e194aa4607df4f09.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/avro-cpp’ -> ‘/var/tmp/dcos/packages/avro-cpp’
+    boot:       ‘/root/dcos/genconf/serve/packages/avro-cpp/avro-cpp--760c214063f6b038b522eaf4b768b905fed56ebc.tar.xz’ -> ‘/var/tmp/dcos/packages/avro-cpp/avro-cpp--760c214063f6b038b522eaf4b768b905fed56ebc.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/boost-libs’ -> ‘/var/tmp/dcos/packages/boost-libs’
+    boot:       ‘/root/dcos/genconf/serve/packages/boost-libs/boost-libs--2015ccb58fb756f61c02ee6aa05cc1e27459a9ec.tar.xz’ -> ‘/var/tmp/dcos/packages/boost-libs/boost-libs--2015ccb58fb756f61c02ee6aa05cc1e27459a9ec.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/bootstrap’ -> ‘/var/tmp/dcos/packages/bootstrap’
+    boot:       ‘/root/dcos/genconf/serve/packages/bootstrap/bootstrap--59a905ecee27e71168ed44cefda4481fb76b816d.tar.xz’ -> ‘/var/tmp/dcos/packages/bootstrap/bootstrap--59a905ecee27e71168ed44cefda4481fb76b816d.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/boto’ -> ‘/var/tmp/dcos/packages/boto’
+    boot:       ‘/root/dcos/genconf/serve/packages/boto/boto--6344d31eef082c7bd13259b17034ea7b5c34aedf.tar.xz’ -> ‘/var/tmp/dcos/packages/boto/boto--6344d31eef082c7bd13259b17034ea7b5c34aedf.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/check-time’ -> ‘/var/tmp/dcos/packages/check-time’
+    boot:       ‘/root/dcos/genconf/serve/packages/check-time/check-time--be7d0ba757ec87f9965378fee7c76a6ee5ae996d.tar.xz’ -> ‘/var/tmp/dcos/packages/check-time/check-time--be7d0ba757ec87f9965378fee7c76a6ee5ae996d.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/cni’ -> ‘/var/tmp/dcos/packages/cni’
+    boot:       ‘/root/dcos/genconf/serve/packages/cni/cni--e48337da39a8cd379414acfe0da52a9226a10d24.tar.xz’ -> ‘/var/tmp/dcos/packages/cni/cni--e48337da39a8cd379414acfe0da52a9226a10d24.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/cosmos’ -> ‘/var/tmp/dcos/packages/cosmos’
+    boot:       ‘/root/dcos/genconf/serve/packages/cosmos/cosmos--20decef90f0623ed253a12ec4cf5c148b18d8249.tar.xz’ -> ‘/var/tmp/dcos/packages/cosmos/cosmos--20decef90f0623ed253a12ec4cf5c148b18d8249.tar.xz’
+    boot:       ‘/root/dcos/gencon
+    boot:       f/serve/packages/curl’ -> ‘/var/tmp/dcos/packages/curl’
+    boot:       ‘/root/dcos/genconf/serve/packages/curl/curl--fc3486c43f98e63f9b12675f1356e8fe842f26b0.tar.xz’ -> ‘/var/tmp/dcos/packages/curl/curl--fc3486c43f98e63f9b12675f1356e8fe842f26b0.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-history’ -> ‘/var/tmp/dcos/packages/dcos-history’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-history/dcos-history--77b0e97d7b25c8bedf8f7da0689cac65b83e3813.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-history/dcos-history--77b0e97d7b25c8bedf8f7da0689cac65b83e3813.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-image-deps’ -> ‘/var/tmp/dcos/packages/dcos-image-deps’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-image-deps/dcos-image-deps--83584fd868e5b470f7cf754424a9a75b328e9b68.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-image-deps/dcos-image-deps--83584fd868e5b470f7cf754424a9a75b328e9b68.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-image’ -> ‘/var/tmp/dcos/packages/dcos-image’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-image/dcos-image--bda6a02bcb2eb21c4218453a870cc584f921a800.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-image/dcos-image--bda6a02bcb2eb21c4218453a870cc584f921a800.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-integration-test’ -> ‘/var/tmp/dcos/packages/dcos-integration-test’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-integration-test/dcos-integration-test--c28bcb2347799dca43083f55e4c7b28503176f9c.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-integration-test/dcos-integration-test--c28bcb2347799dca43083f55e4c7b28503176f9c.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-log’ -> ‘/var/tmp/dcos/packages/dcos-log’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-log/dcos-log--4d630df863228f38c6333e44670b4c4b20a74832.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-log/dcos-log--4d630df863228f38c6333e44670b4c4b20a74832.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-metrics’ -> ‘/var/tmp/dcos/packages/dcos-metrics’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-metrics/dcos-metrics--23ee2f89c58b1258bc959f1d0dd7debcbb3d79d2.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-metrics/dcos-metrics--23ee2f89c58b1258bc959f1d0dd7debcbb3d79d2.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-oauth’ -> ‘/var/tmp/dcos/packages/dcos-oauth’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-oauth/dcos-oauth--0079529da183c0f23a06d2b069721b6fa6cc7b52.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-oauth/dcos-oauth--0079529da183c0f23a06d2b069721b6fa6cc7b52.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-signal’ -> ‘/var/tmp/dcos/packages/dcos-signal’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-signal/dcos-signal--1bcd3b612cbdc379380dcba17cdf9a3b6652d9dc.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-signal/dcos-signal--1bcd3b612cbdc379380dcba17cdf9a3b6652d9dc.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-ui’ -> ‘/var/tmp/dcos/packages/dcos-ui’
+    boot:       ‘/root/dcos/genconf/serve/packages/dcos-ui/dcos-ui--d4afd695796404a5b35950c3daddcae322481ac4.tar.xz’ -> ‘/var/tmp/dcos/packages/dcos-ui/dcos-ui--d4afd695796404a5b35950c3daddcae322481ac4.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dnspython’ -> ‘/var/tmp/dcos/packages/dnspython’
+    boot:       ‘/root/dcos/genconf/serve/packages/dnspython/dnspython--0f833eb9a8abeba3179b43f3a200a8cd42d3795a.tar.xz’ -> ‘/var/tmp/dcos/packages/dnspython/dnspython--0f833eb9a8abeba3179b43f3a200a8cd42d3795a.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/docker-gc’ -> ‘/var/tmp/dcos/packages/docker-gc’
+    boot:       ‘/root/dcos/genconf/serve/packages/docker-gc/docker-gc--59a98ed6446a084bf74e4ff4b8e3479f59ea8528.tar.xz’ -> ‘/var/tmp/dcos/packages/docker-gc/docker-gc--59a98ed6446a084bf74e4ff4b8e3479f59ea8528.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/dvdcli’ -> ‘/var/tmp/dcos/packages/dvdcli’
+    boot:       ‘/root/dcos/genconf/serve/packages/dvdcli/dvdcli--5374dd4ffb519f1dcefdec89b2247e3404f2e2e3.tar.xz’ -> ‘/var/tmp/dcos/packages/dvdcli/dvdcli--5374dd4ffb519f1dcefdec89b2247e3404f2e2e3.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/erlang’ -> ‘/var/tmp/dcos/packages/erlang’
+    boot:       ?
+    boot:       ?/root/dcos/genconf/serve/packages/erlang/erlang--a9ee2530357a3301e53056b36a93420847b339a3.tar.xz’ -> ‘/var/tmp/dcos/packages/erlang/erlang--a9ee2530357a3301e53056b36a93420847b339a3.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/exhibitor’ -> ‘/var/tmp/dcos/packages/exhibitor’
+    boot:       ‘/root/dcos/genconf/serve/packages/exhibitor/exhibitor--72d9d8f947e5411eda524d40dde1a58edeb158ed.tar.xz’ -> ‘/var/tmp/dcos/packages/exhibitor/exhibitor--72d9d8f947e5411eda524d40dde1a58edeb158ed.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/flask’ -> ‘/var/tmp/dcos/packages/flask’
+    boot:       ‘/root/dcos/genconf/serve/packages/flask/flask--26d1bcdb2d1c3dcf1d2c03bc0d4f29c86d321b21.tar.xz’ -> ‘/var/tmp/dcos/packages/flask/flask--26d1bcdb2d1c3dcf1d2c03bc0d4f29c86d321b21.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/java’ -> ‘/var/tmp/dcos/packages/java’
+    boot:       ‘/root/dcos/genconf/serve/packages/java/java--cd5e921ce66b0d3303883c06d73a657314044304.tar.xz’ -> ‘/var/tmp/dcos/packages/java/java--cd5e921ce66b0d3303883c06d73a657314044304.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/libevent’ -> ‘/var/tmp/dcos/packages/libevent’
+    boot:       ‘/root/dcos/genconf/serve/packages/libevent/libevent--208be855d2be29c9271a7bd6c04723ff79946e02.tar.xz’ -> ‘/var/tmp/dcos/packages/libevent/libevent--208be855d2be29c9271a7bd6c04723ff79946e02.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/libffi’ -> ‘/var/tmp/dcos/packages/libffi’
+    boot:       ‘/root/dcos/genconf/serve/packages/libffi/libffi--83ce3bd7eda2ef089e57efd2bc16c144d5a1f094.tar.xz’ -> ‘/var/tmp/dcos/packages/libffi/libffi--83ce3bd7eda2ef089e57efd2bc16c144d5a1f094.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/libsodium’ -> ‘/var/tmp/dcos/packages/libsodium’
+    boot:       ‘/root/dcos/genconf/serve/packages/libsodium/libsodium--9ff915db08c6bba7d6738af5084e782b13c84bf8.tar.xz’ -> ‘/var/tmp/dcos/packages/libsodium/libsodium--9ff915db08c6bba7d6738af5084e782b13c84bf8.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/logrotate’ -> ‘/var/tmp/dcos/packages/logrotate’
+    boot:       ‘/root/dcos/genconf/serve/packages/logrotate/logrotate--7f7bc4416d3ad101d0c5218872858483b516be07.tar.xz’ -> ‘/var/tmp/dcos/packages/logrotate/logrotate--7f7bc4416d3ad101d0c5218872858483b516be07.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/marathon’ -> ‘/var/tmp/dcos/packages/marathon’
+    boot:       ‘/root/dcos/genconf/serve/packages/marathon/marathon--bfb24f7f90cb3cd52a1cb22a07caafa5013bba21.tar.xz’ -> ‘/var/tmp/dcos/packages/marathon/marathon--bfb24f7f90cb3cd52a1cb22a07caafa5013bba21.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos-dns’ -> ‘/var/tmp/dcos/packages/mesos-dns’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos-dns/mesos-dns--0401501b2b5152d01bfa84ff6d007fdafe414b16.tar.xz’ -> ‘/var/tmp/dcos/packages/mesos-dns/mesos-dns--0401501b2b5152d01bfa84ff6d007fdafe414b16.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos-modules’ -> ‘/var/tmp/dcos/packages/mesos-modules’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos-modules/mesos-modules--311849eaae42696b8a7eefe86b9ab3ebd9bd48f5.tar.xz’ -> ‘/var/tmp/dcos/packages/mesos-modules/mesos-modules--311849eaae42696b8a7eefe86b9ab3ebd9bd48f5.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos’ -> ‘/var/tmp/dcos/packages/mesos’
+    boot:       ‘/root/dcos/genconf/serve/packages/mesos/mesos--aaedd03eee0d57f5c0d49c74ff1e5721862cad98.tar.xz’ -> ‘/var/tmp/dcos/packages/mesos/mesos--aaedd03eee0d57f5c0d49c74ff1e5721862cad98.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/metronome’ -> ‘/var/tmp/dcos/packages/metronome’
+    boot:       ‘/root/dcos/genconf/serve/packages/metronome/metronome--467e4c64f804dbd4cd8572516e111a3f9298c10d.tar.xz’ -> ‘/var/tmp/dcos/packages/metronome/metronome--467e4c64f804dbd4cd8572516e111a3f9298c10d.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/navstar’ -> ‘/var/tmp/dcos/packages/navstar’
+    boot:       ‘/root/dcos/genconf/serve/packages/navstar/navstar--1128db0234105a64fb4be52f4453cd6aa895ff30.tar.xz’ -> ‘/var/tmp/dcos/packages/navstar/navstar--1128db0234105a64fb4be52f4453cd6aa895ff30.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/ncurses’ -> ‘/var/tmp/dcos/pa
+    boot:       ckages/ncurses’
+    boot:       ‘/root/dcos/genconf/serve/packages/ncurses/ncurses--d889894b71aa1a5b311bafef0e85479025b4dacb.tar.xz’ -> ‘/var/tmp/dcos/packages/ncurses/ncurses--d889894b71aa1a5b311bafef0e85479025b4dacb.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/octarine’ -> ‘/var/tmp/dcos/packages/octarine’
+    boot:       ‘/root/dcos/genconf/serve/packages/octarine/octarine--e86d3312691b12523280d56f6260216729aaa0ad.tar.xz’ -> ‘/var/tmp/dcos/packages/octarine/octarine--e86d3312691b12523280d56f6260216729aaa0ad.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/openssl’ -> ‘/var/tmp/dcos/packages/openssl’
+    boot:       ‘/root/dcos/genconf/serve/packages/openssl/openssl--b01a32a42e3ccba52b417276e9509a441e1d4a82.tar.xz’ -> ‘/var/tmp/dcos/packages/openssl/openssl--b01a32a42e3ccba52b417276e9509a441e1d4a82.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/pkgpanda-api’ -> ‘/var/tmp/dcos/packages/pkgpanda-api’
+    boot:       ‘/root/dcos/genconf/serve/packages/pkgpanda-api/pkgpanda-api--541feb8a8be58bdde8fecf1d2e5bfa0515f5a7d0.tar.xz’ -> ‘/var/tmp/dcos/packages/pkgpanda-api/pkgpanda-api--541feb8a8be58bdde8fecf1d2e5bfa0515f5a7d0.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/pkgpanda-role’ -> ‘/var/tmp/dcos/packages/pkgpanda-role’
+    boot:       ‘/root/dcos/genconf/serve/packages/pkgpanda-role/pkgpanda-role--f8a749a4a821476ad2ef7e9dd9d12b6a8c4643a4.tar.xz’ -> ‘/var/tmp/dcos/packages/pkgpanda-role/pkgpanda-role--f8a749a4a821476ad2ef7e9dd9d12b6a8c4643a4.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/pytest’ -> ‘/var/tmp/dcos/packages/pytest’
+    boot:       ‘/root/dcos/genconf/serve/packages/pytest/pytest--78aee3e58a049cdab0d266af74f77d658b360b4f.tar.xz’ -> ‘/var/tmp/dcos/packages/pytest/pytest--78aee3e58a049cdab0d266af74f77d658b360b4f.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-azure-mgmt-resource’ -> ‘/var/tmp/dcos/packages/python-azure-mgmt-resource’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-azure-mgmt-resource/python-azure-mgmt-resource--03c05550f43b0e7a4455c33fe43b0deb755d87f0.tar.xz’ -> ‘/var/tmp/dcos/packages/python-azure-mgmt-resource/python-azure-mgmt-resource--03c05550f43b0e7a4455c33fe43b0deb755d87f0.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-cryptography’ -> ‘/var/tmp/dcos/packages/python-cryptography’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-cryptography/python-cryptography--4184767c68e48801dd394072cb370c610a05029d.tar.xz’ -> ‘/var/tmp/dcos/packages/python-cryptography/python-cryptography--4184767c68e48801dd394072cb370c610a05029d.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-dateutil’ -> ‘/var/tmp/dcos/packages/python-dateutil’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-dateutil/python-dateutil--fdc6ff929f65dd0918cf75a9ad56704683d31781.tar.xz’ -> ‘/var/tmp/dcos/packages/python-dateutil/python-dateutil--fdc6ff929f65dd0918cf75a9ad56704683d31781.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-docopt’ -> ‘/var/tmp/dcos/packages/python-docopt’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-docopt/python-docopt--beba78faa13e5bf4c52393b4b82d81f3c391aa65.tar.xz’ -> ‘/var/tmp/dcos/packages/python-docopt/python-docopt--beba78faa13e5bf4c52393b4b82d81f3c391aa65.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-gunicorn’ -> ‘/var/tmp/dcos/packages/python-gunicorn’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-gunicorn/python-gunicorn--a537f95661fb2689c52fe12510eb0d01cb83af60.tar.xz’ -> ‘/var/tmp/dcos/packages/python-gunicorn/python-gunicorn--a537f95661fb2689c52fe12510eb0d01cb83af60.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-isodate’ -> ‘/var/tmp/dcos/packages/python-isodate’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-isodate/python-isodate--40d378c688e6badfd16676dd8b51b742bfebc8d5.tar.xz’ -> ‘/var/tmp/dcos/packages/python-isodate/python-isodate--40d378c688e6badfd16676dd8b51b742bfebc8d5.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-jinja2’ -> ‘/var/tmp/dcos/packages/python-jinja2’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-jinja2/python-jinja2--7450f5ae5a822f63f7a58c717207be0456df51ed.tar.xz’ -> ‘/var/tmp/dcos/packages/python-jinja2/
+    boot:       python-jinja2--7450f5ae5a822f63f7a58c717207be0456df51ed.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-kazoo’ -> ‘/var/tmp/dcos/packages/python-kazoo’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-kazoo/python-kazoo--cb7ce13a1068cd82dd84ea0de32b529a760a4bdd.tar.xz’ -> ‘/var/tmp/dcos/packages/python-kazoo/python-kazoo--cb7ce13a1068cd82dd84ea0de32b529a760a4bdd.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-markupsafe’ -> ‘/var/tmp/dcos/packages/python-markupsafe’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-markupsafe/python-markupsafe--dd46d2a3c58611656a235f96d4adc51b2a7a590e.tar.xz’ -> ‘/var/tmp/dcos/packages/python-markupsafe/python-markupsafe--dd46d2a3c58611656a235f96d4adc51b2a7a590e.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-passlib’ -> ‘/var/tmp/dcos/packages/python-passlib’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-passlib/python-passlib--802ec3605c0b82428fedba60983b1bafaa036bb8.tar.xz’ -> ‘/var/tmp/dcos/packages/python-passlib/python-passlib--802ec3605c0b82428fedba60983b1bafaa036bb8.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-pyyaml’ -> ‘/var/tmp/dcos/packages/python-pyyaml’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-pyyaml/python-pyyaml--81dd44cc4a24db7cefa7016c6586a131acf279c3.tar.xz’ -> ‘/var/tmp/dcos/packages/python-pyyaml/python-pyyaml--81dd44cc4a24db7cefa7016c6586a131acf279c3.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-requests’ -> ‘/var/tmp/dcos/packages/python-requests’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-requests/python-requests--1b2cadbd3811cc0c2ee235ce927e13ea1d6af41d.tar.xz’ -> ‘/var/tmp/dcos/packages/python-requests/python-requests--1b2cadbd3811cc0c2ee235ce927e13ea1d6af41d.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-retrying’ -> ‘/var/tmp/dcos/packages/python-retrying’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-retrying/python-retrying--eb7b8bac133f50492b1e1349cbe77c3e38bd02c3.tar.xz’ -> ‘/var/tmp/dcos/packages/python-retrying/python-retrying--eb7b8bac133f50492b1e1349cbe77c3e38bd02c3.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-tox’ -> ‘/var/tmp/dcos/packages/python-tox’
+    boot:       ‘/root/dcos/genconf/serve/packages/python-tox/python-tox--07244f8a939a10353634c952c6d88ec4a3c05736.tar.xz’ -> ‘/var/tmp/dcos/packages/python-tox/python-tox--07244f8a939a10353634c952c6d88ec4a3c05736.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/python’ -> ‘/var/tmp/dcos/packages/python’
+    boot:       ‘/root/dcos/genconf/serve/packages/python/python--b7a144a49577a223d37d447c568f51330ee95390.tar.xz’ -> ‘/var/tmp/dcos/packages/python/python--b7a144a49577a223d37d447c568f51330ee95390.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/rexray’ -> ‘/var/tmp/dcos/packages/rexray’
+    boot:       ‘/root/dcos/genconf/serve/packages/rexray/rexray--869621bb411c9f2a793ea42cdfeed489e1972aaa.tar.xz’ -> ‘/var/tmp/dcos/packages/rexray/rexray--869621bb411c9f2a793ea42cdfeed489e1972aaa.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/six’ -> ‘/var/tmp/dcos/packages/six’
+    boot:       ‘/root/dcos/genconf/serve/packages/six/six--f06424b68523c4dfa2a7c3e7475d479f3d361e42.tar.xz’ -> ‘/var/tmp/dcos/packages/six/six--f06424b68523c4dfa2a7c3e7475d479f3d361e42.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/spartan’ -> ‘/var/tmp/dcos/packages/spartan’
+    boot:       ‘/root/dcos/genconf/serve/packages/spartan/spartan--9cc57a3d55452b905d90e3201f56913140914ecc.tar.xz’ -> ‘/var/tmp/dcos/packages/spartan/spartan--9cc57a3d55452b905d90e3201f56913140914ecc.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/strace’ -> ‘/var/tmp/dcos/packages/strace’
+    boot:       ‘/root/dcos/genconf/serve/packages/strace/strace--7d01796d64994451c1b2b82d161a335cbe90569b.tar.xz’ -> ‘/var/tmp/dcos/packages/strace/strace--7d01796d64994451c1b2b82d161a335cbe90569b.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/teamcity-messages’ -> ‘/var/tmp/dcos/packages/teamcity-messages’
+    boot:       ‘/root/dcos/genconf/serve/packages/teamcity-messages/teamcity-messages--e623a4d86eb3a8d199cefcc240dd4c5460cb2962.tar.xz’ -> ‘/var/tmp/dcos/packages/teamcity-messages/teamcity-messages--e623a4d86eb
+    boot:       3a8d199cefcc240dd4c5460cb2962.tar.xz’
+    boot:       ‘/root/dcos/genconf/serve/packages/toybox’ -> ‘/var/tmp/dcos/packages/toybox’
+    boot:       ‘/root/dcos/genconf/serve/packages/toybox/toybox--f235594ab8ea9a2864ee72abe86723d76f92e848.tar.xz’ -> ‘/var/tmp/dcos/packages/toybox/toybox--f235594ab8ea9a2864ee72abe86723d76f92e848.tar.xz’
+==> m1: Installing DC/OS (master)
+==> m1: [sudo]$ bash -ceu "curl --fail --location --silent --show-error --verbose http://boot.dcos/dcos_install.sh | bash -s -- master"
+==> m1:       * About to connect() to boot.dcos port 80 (#0)
+==> m1:       *   Trying 192.168.65.50...
+==> m1:       * Connected to boot.dcos (192.168.65.50) port 80 (#0)
+==> m1:       > GET /dcos_install.sh HTTP/1.1
+==> m1:       > User-Agent: curl/7.29.0
+==> m1:       > Host: boot.dcos
+==> m1:       > Accept: */*
+==> m1:       > 
+==> m1:       < HTTP/1.1 200 OK
+==> m1:       < Server: nginx/1.11.13
+==> m1:       < Date: Fri, 16 Jun 2017 17:34:01 GMT
+==> m1:       < Content-Type: application/octet-stream
+==> m1:       < Content-Length: 18905
+==> m1:       < Last-Modified: Fri, 16 Jun 2017 17:33:53 GMT
+==> m1:       < Connection: keep-alive
+==> m1:       < ETag: "59441681-49d9"
+==> m1:       < Accept-Ranges: bytes
+==> m1:       < 
+==> m1:       { [data not shown]
+==> m1:       * Connection #0 to host boot.dcos left intact
+    m1:       Starting DC/OS Install Process
+    m1:       Running preflight checks
+    m1:       Checking if DC/OS is already installed: PASS (Not installed)
+    m1:       PASS Is SELinux disabled?
+    m1:       Checking if docker is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking docker version requirement (>= 1.6): 
+    m1:       PASS (1.13.1)
+    m1:       Checking if curl is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if bash is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if ping is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if tar is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if xz is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if unzip is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if ipset is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if systemd-notify is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking if systemd is installed and in PATH: 
+    m1:       PASS 
+    m1:       Checking systemd version requirement (>= 200): 
+    m1:       PASS (219)
+    m1:       Checking if group 'nogroup' exists: 
+    m1:       PASS 
+    m1:       Checking if port 53 (required by spartan) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 80 (required by adminrouter) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 443 (required by adminrouter) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 1050 (required by 3dt) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 2181 (required by zookeeper) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 5050 (required by mesos-master) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 7070 (required by cosmos) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 8080 (required by marathon) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 8101 (required by dcos-oauth) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 8123 (required by mesos-dns) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 8181 (required by exhibitor) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 9000 (required by metronome) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 9942 (required by metronome) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 9990 (required by cosmos) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 15055 (required by dcos-history) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 33107 (required by navstar) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 36771 (required by marathon) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 41281 (required by zookeeper) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 42819 (required by spartan) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 43911 (required by minuteman) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 46839 (required by metronome) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 61053 (required by mesos-dns) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 61420 (required by epmd) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 61421 (required by minuteman) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 62053 (required by spartan) is in use: 
+    m1:       PASS 
+    m1:       Checking if port 62080 (required by navstar) is in use: 
+    m1:       PASS 
+    m1:       Checking Docker is configured with a production storage driver: 
+==> m1:       WARNING: bridge-nf-call-iptables is disabled
+==> m1:       WARNING: bridge-nf-call-ip6tables is disabled
+    m1:       PASS (overlay)
+    m1:       Creating directories under /etc/mesosphere
+    m1:       Creating role file for master
+    m1:       Configuring DC/OS
+    m1:       Setting and starting DC/OS
+==> m1:       Created symlink from /etc/systemd/system/multi-user.target.wants/dcos-setup.service to /etc/systemd/system/dcos-setup.service.
+
+
+==> m1: DC/OS Postflight
+==> a1: DC/OS Postflight
+==> m1: [sudo]$ dcos-postflight
+==> a1: [sudo]$ dcos-postflight
+==> p1: DC/OS Postflight
+==> p1: [sudo]$ dcos-postflight
+==> a1: Setting Mesos Memory: 5632 (role=*)
+==> a1: [sudo]$ mesos-memory 5632
+    a1:       Updating /var/lib/dcos/mesos-resources
+==> p1: Setting Mesos Memory: 1024 (role=slave_public)
+==> p1: [sudo]$ mesos-memory 1024 slave_public
+==> a1: Restarting Mesos Agent
+==> a1: [sudo]$ bash -ceu "systemctl stop dcos-mesos-slave.service && rm -f /var/lib/mesos/slave/meta/slaves/latest && systemctl start dcos-mesos-slave.service --no-block"
+    p1:       Updating /var/lib/dcos/mesos-resources
+==> p1: Restarting Mesos Agent
+==> p1: [sudo]$ bash -ceu "systemctl stop dcos-mesos-slave-public.service && rm -f /var/lib/mesos/slave/meta/slaves/latest && systemctl start dcos-mesos-slave-public.service --no-block"
+==> boot: DC/OS Installation Complete
+==> boot: Web Interface: http://m1.dcos/
