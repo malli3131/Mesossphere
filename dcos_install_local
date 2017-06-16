@@ -1,0 +1,9 @@
+Installing DC/OS locally.
+1. Install git : brew install git - sudo yum install git - sudo apt-get install git
+2. Install virtualbox: brew cask install virtualbox - sudo yum install virtualbox - sudo apt-get install virtualbox
+3. Install Vagrant: brew cask install vagrant - sudo yum install vagrant - sudo apt-get install vagrant
+4. Install vagrant-manager: brew cask install vagrant-manager - sudo yum install vagrant-manager - sudo apt-get install vagrant-manager
+5. Install vagrant-hostmanager: vagrant plugin install vagrant-hostmanager
+6. Get the dcos-vagrant : git clone https://github.com/dcos/dcos-vagrant
+7. Go to the dcos-vagrant directory
+8. run the command - vagrant up
